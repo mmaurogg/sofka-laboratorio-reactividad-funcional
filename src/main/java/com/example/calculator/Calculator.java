@@ -1,6 +1,9 @@
 package com.example.calculator;
 
 import com.example.calculator.model.Function;
+import com.example.email.models.Email;
+import com.example.utilities.EmailList;
+import com.example.utilities.Funcions;
 import org.jboss.logging.Logger;
 
 import java.util.List;
@@ -20,10 +23,7 @@ public class Calculator {
      * */
     public static void calculator (){
 
-        List<Function> functions = List.of(
-                new Function(2,"x",1),
-                new Function(5,"x",3)
-        );
+        List<Function> functions = Funcions.functions;
 
         log.info(" \nla derivada de las funciones son: "
                 + functions.stream()
