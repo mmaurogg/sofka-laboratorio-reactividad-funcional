@@ -19,7 +19,7 @@ public class EmailCorrectTest {
                 .collect(Collectors.toList())
                 .size();
 
-        Assert.assertEquals(isTrue, 13l);
+        Assert.assertEquals(isTrue, 32l);
     }
 
 }

@@ -21,6 +21,9 @@ public class CheckMessage {
     private static final Logger log = Logger.getLogger("");
     private static List<String> restrictWords = List.of("marica", "puta", "pirobo", "gonorrea", "malparido", "carechimba");
 
+    /**
+     * Función que activa el chat
+     * */
     public static void activeChat() {
         log.info("Bienvendio al chat, escriba su mensaje:");
         Scanner scanner = new Scanner(System.in);
@@ -32,6 +35,11 @@ public class CheckMessage {
         filterMessage(listMessage);
 
     }
+
+    /**
+     * Función que filtra los mensajes del chat y cambia las malas palabras por ****
+     * @param @message es el mensaje convertido a lista a analizar
+     * */
     private static void filterMessage(List<String> message) {
 
         Flux.fromIterable(message)

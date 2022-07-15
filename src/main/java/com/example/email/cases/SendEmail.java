@@ -7,13 +7,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * si se envió un correo o no a cada uno de los correos, si se le envió cambiar el estado en la lista,
- * esto respetando la inmutabilidad.
+ * Esta clase comprueba que correos fueron enviados y cambia su estado
+ * @author: Manuel Mauricio Gómez Gallo - mmaurogg
+ * @version: 14/07/2022
  */
 public class SendEmail {
 
     private static List<Email> emails = EmailList.emails();
 
+    /**
+     * Método que busca os correos enviados y cambia su estado a false
+     * @return lista de correos que se les cambió el estado
+     * */
     public static List<Email> emailsSends (){
 
         return emails.stream()

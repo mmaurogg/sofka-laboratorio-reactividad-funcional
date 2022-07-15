@@ -14,6 +14,10 @@ public class Calculator {
 
     private static final Logger log = Logger.getLogger("");
 
+    /**
+     * Método para probar las funciones derivar e integrar
+     * imprime los valores de estas de una lista de funciones dadas
+     * */
     public static void calculator (){
 
         List<Function> functions = List.of(
@@ -34,6 +38,11 @@ public class Calculator {
 
     }
 
+    /**
+     * Método que calcula la derivada de una función
+     * @param @Funcion que se quiere derivar
+     * @return la funcion con la derivada aplicada
+     **/
     public static Function derivar(Function funcion) {
 
         if (funcion.getVariable().isEmpty()) return new Function(0);
@@ -47,6 +56,11 @@ public class Calculator {
 
     }
 
+    /**
+     * Método que calcula la integral de una función
+     * @param @Funcion que se quiere integrar
+     * @return la funcion con la integral aplicada
+     */
     public static Function integrar(Function funcion) {
 
         if (funcion.getVariable().isEmpty()) return new Function(funcion.getBody(), "x", 1);
